@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nar Patisserie - корзина заказа</title>
+  <meta name="description" content="Корзина заказа Nar Patisserie: проверьте выбранные десерты, укажите контакты и адрес доставки." />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body id="top" data-page="cart">
+  <header class="site-header">
+    <div class="top-line">
+      <div class="container top-line-inner">
+        <span>город Баку</span>
+        <span>Ежедневно 09:00-21:00</span>
+        <span>+994 50 123 45 67</span>
+      </div>
+    </div>
+
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Nar Patisserie - главная">
+        <img class="logo-mark" src="images/logo.svg" alt="" aria-hidden="true" />
+        <span>
+          <strong>Nar Patisserie</strong>
+          <small>кондитерская в Баку</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню">☰</button>
+      <nav class="nav" aria-label="Главное меню">
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="catalog.html">Каталог</a>
+        <a class="nav-link active" href="cart.html">Корзина <span class="cart-badge" data-cart-count>0</span></a>
+        <a class="nav-link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section compact-hero">
+      <div class="container">
+        <p class="eyebrow">Оформление заказа</p>
+        <h1>Корзина покупателя</h1>
+        <p>Проверьте выбранные позиции, измените количество и оставьте данные для подтверждения заказа. После отправки заявки мы свяжемся с вами.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cart-layout">
+        <div class="cart-panel">
+          <div class="panel-header">
+            <h2>Выбранные товары</h2>
+            <button class="text-button" type="button" data-clear-cart>Очистить корзину</button>
+          </div>
+
+          <div class="cart-items" data-cart-items></div>
+
+          <div class="empty-state hidden" data-cart-empty>
+            <h3>Корзина пока пустая</h3>
+            <p>Добавьте десерты или напитки из каталога, чтобы оформить заказ.</p>
+            <a class="btn btn-primary" href="catalog.html">Перейти в каталог</a>
+          </div>
+        </div>
+
+        <aside class="order-panel">
+          <h2>Данные заказа</h2>
+          <p class="panel-note">Оплата согласуется после подтверждения: менеджер связывается с покупателем и уточняет детали.</p>
+          <div class="summary-box">
+            <div><span>Количество товаров</span><strong data-summary-count>0</strong></div>
+            <div><span>Сумма</span><strong data-summary-total>0.00 AZN</strong></div>
+          </div>
+
+          <form class="order-form" data-order-form novalidate>
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Камиль" required minlength="2" />
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+994 50 000 00 00" required />
+            </label>
+            <label>
+              <span>Адрес доставки</span>
+              <input type="text" name="address" placeholder="Баку, район, улица" required minlength="5" />
+            </label>
+            <label>
+              <span>Комментарий</span>
+              <textarea name="comment" rows="4" placeholder="Например: доставить после 18:00"></textarea>
+            </label>
+            <button class="btn btn-primary full-width" type="submit">Оформить заказ</button>
+            <p class="form-message" data-order-message></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <a class="scroll-top" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nar Patisserie. Свежие десерты, торты и кофе в Баку.</p>
+      <p>+994 50 123 45 67 · 09:00-21:00</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nar Patisserie - контакты</title>
+  <meta name="description" content="Контакты Nar Patisserie: город Баку, телефон, график работы, доставка, Google-карта и форма обратной связи." />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body id="top" data-page="contacts">
+  <header class="site-header">
+    <div class="top-line">
+      <div class="container top-line-inner">
+        <span>город Баку</span>
+        <span>Ежедневно 09:00-21:00</span>
+        <span>+994 50 123 45 67</span>
+      </div>
+    </div>
+
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Nar Patisserie - главная">
+        <img class="logo-mark" src="images/logo.svg" alt="" aria-hidden="true" />
+        <span>
+          <strong>Nar Patisserie</strong>
+          <small>кондитерская в Баку</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню">☰</button>
+      <nav class="nav" aria-label="Главное меню">
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link" href="catalog.html">Каталог</a>
+        <a class="nav-link" href="cart.html">Корзина <span class="cart-badge" data-cart-count>0</span></a>
+        <a class="nav-link active" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section compact-hero">
+      <div class="container">
+        <p class="eyebrow">Контакты</p>
+        <h1>Адрес, график и обратная связь</h1>
+        <p>Мы на связи каждый день: уточним наличие десертов, поможем с заказом и подскажем удобный способ получения.</p>
+      </div>
+    </section>
+
+    <section class="section contact-page-section">
+      <div class="container">
+        <div class="contact-cards contact-cards-row">
+          <article class="contact-card">
+            <span>Адрес</span>
+            <strong>город Баку</strong>
+            <p>Удобная локация для самовывоза. Точку можно открыть на карте ниже.</p>
+          </article>
+          <article class="contact-card">
+            <span>Телефон</span>
+            <strong>+994 50 123 45 67</strong>
+            <p>Принимаем заявки, уточняем наличие десертов и согласуем время доставки.</p>
+          </article>
+          <article class="contact-card">
+            <span>График</span>
+            <strong>Пн-Вс: 09:00 - 21:00</strong>
+            <p>Доставка и самовывоз доступны каждый день в рабочее время.</p>
+          </article>
+        </div>
+
+        <div class="contact-window">
+          <div class="contact-form-panel">
+            <p class="eyebrow">Обратная связь</p>
+            <h2>Напишите нам</h2>
+            <p class="contact-window-text">Оставьте сообщение, если хотите уточнить состав десертов, наличие товаров, условия доставки или заказ к определенному времени.</p>
+
+            <form class="feedback-form" data-feedback-form novalidate>
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name" placeholder="Введите имя" required minlength="2" />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="example@mail.com" required />
+              </label>
+              <label>
+                <span>Сообщение</span>
+                <textarea name="message" rows="5" placeholder="Ваш вопрос или комментарий" required minlength="10"></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Отправить</button>
+              <p class="form-message" data-feedback-message></p>
+            </form>
+          </div>
+
+          <div class="map-card contact-window-map" aria-label="Карта расположения кондитерской">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5661.972435182331!2d49.85404141817858!3d40.37965738129314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d1b32e523f9%3A0xb8595a0a6206ad79!2sAZZA!5e0!3m2!1sru!2saz!4v1778158183530!5m2!1sru!2saz"
+              title="Карта расположения Nar Patisserie"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="scroll-top" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nar Patisserie. Свежие десерты, торты и кофе в Баку.</p>
+      <p>+994 50 123 45 67 · 09:00-21:00</p>
+    </div>
+  </footer>
+</body>
+</html>

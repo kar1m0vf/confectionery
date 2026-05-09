@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nar Patisserie - каталог десертов</title>
+  <meta name="description" content="Каталог Nar Patisserie: торты, пирожные, печенье, кофе и напитки с удобным поиском, фильтрами и корзиной." />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body id="top" data-page="catalog">
+  <header class="site-header">
+    <div class="top-line">
+      <div class="container top-line-inner">
+        <span>город Баку</span>
+        <span>Ежедневно 09:00-21:00</span>
+        <span>+994 50 123 45 67</span>
+      </div>
+    </div>
+
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Nar Patisserie - главная">
+        <img class="logo-mark" src="images/logo.svg" alt="" aria-hidden="true" />
+        <span>
+          <strong>Nar Patisserie</strong>
+          <small>кондитерская в Баку</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню">☰</button>
+      <nav class="nav" aria-label="Главное меню">
+        <a class="nav-link" href="index.html">Главная</a>
+        <a class="nav-link active" href="catalog.html">Каталог</a>
+        <a class="nav-link" href="cart.html">Корзина <span class="cart-badge" data-cart-count>0</span></a>
+        <a class="nav-link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section compact-hero">
+      <div class="container">
+        <p class="eyebrow">Витрина Nar Patisserie</p>
+        <h1>Десерты, выпечка и напитки</h1>
+        <p>Выберите категорию, найдите нужную позицию через поиск и добавьте ее в корзину. В меню есть торты, пирожные, печенье, кофе и освежающие напитки.</p>
+      </div>
+    </section>
+
+    <section class="section catalog-section">
+      <div class="container">
+        <div class="catalog-toolbar">
+          <label class="search-box">
+            <span>Поиск товара</span>
+            <input type="search" data-search-input placeholder="Например: торт, макарун, кофе" />
+          </label>
+
+          <label class="sort-box">
+            <span>Сортировка</span>
+            <select data-sort-select>
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Цена: сначала дешевле</option>
+              <option value="price-desc">Цена: сначала дороже</option>
+              <option value="name-asc">Название: А-Я</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="category-tabs" data-category-tabs>
+          <button class="tab-btn active" type="button" data-category="all">Все</button>
+          <button class="tab-btn" type="button" data-category="cakes">Торты</button>
+          <button class="tab-btn" type="button" data-category="pastry">Пирожные</button>
+          <button class="tab-btn" type="button" data-category="cookies">Печенье</button>
+          <button class="tab-btn" type="button" data-category="drinks">Напитки</button>
+        </div>
+
+        <div class="catalog-info">
+          <p data-products-counter>Позиций в меню: 0</p>
+          <a class="text-link" href="cart.html">Перейти в корзину →</a>
+        </div>
+
+        <div class="product-grid" data-products-grid></div>
+        <div class="empty-state hidden" data-empty-state>
+          <h3>Товары не найдены</h3>
+          <p>Попробуйте изменить запрос поиска или выбрать другую категорию.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="scroll-top" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nar Patisserie. Свежие десерты, торты и кофе в Баку.</p>
+      <p>+994 50 123 45 67 · 09:00-21:00</p>
+    </div>
+  </footer>
+</body>
+</html>

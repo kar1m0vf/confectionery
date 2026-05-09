@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nar Patisserie</title>
+  <meta name="description" content="Nar Patisserie - кондитерская в Баку со свежими тортами, десертами, кофе, самовывозом и доставкой по городу." />
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body id="top" data-page="home">
+  <header class="site-header">
+    <div class="top-line">
+      <div class="container top-line-inner">
+        <span>город Баку</span>
+        <span>Ежедневно 09:00-21:00</span>
+        <span>+994 50 123 45 67</span>
+      </div>
+    </div>
+
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Nar Patisserie - главная">
+        <img class="logo-mark" src="images/logo.svg" alt="" aria-hidden="true" />
+        <span>
+          <strong>Nar Patisserie</strong>
+          <small>кондитерская в Баку</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Открыть меню">☰</button>
+
+      <nav class="nav" aria-label="Главное меню">
+        <a class="nav-link active" href="index.html">Главная</a>
+        <a class="nav-link" href="catalog.html">Каталог</a>
+        <a class="nav-link" href="cart.html">Корзина <span class="cart-badge" data-cart-count>0</span></a>
+        <a class="nav-link" href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-cover">
+      <div class="hero-backdrop" aria-hidden="true">
+        <img
+          src="images/photos/hero-main.jpg"
+          alt=""
+          
+        />
+      </div>
+      <div class="container hero-cover-inner">
+        <p class="eyebrow">Кондитерская в Баку</p>
+        <h1>Nar Patisserie</h1>
+        <p class="hero-text">
+          Готовим торты, пирожные, печенье и напитки небольшими партиями с аккуратной подачей и гранатовыми сезонными акцентами. Можно зайти за десертом к кофе,
+          собрать сладкий набор или оформить заказ на доставку.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="catalog.html">Открыть меню</a>
+          <a class="btn btn-secondary" href="contacts.html">Как нас найти</a>
+        </div>
+        <div class="hero-stills" aria-hidden="true">
+          <img src="images/photos/chocolate-cake.jpg" alt="" />
+          <img src="images/photos/macarons.jpg" alt="" />
+          <img src="images/photos/cherry-cake.jpg" alt="" />
+          <img src="images/photos/cappuccino.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section category-section">
+      <div class="container">
+        <div class="section-title row-title">
+          <div>
+            <p class="eyebrow">Ассортимент</p>
+            <h2>Выберите раздел витрины</h2>
+          </div>
+          <a class="text-link" href="catalog.html">Все позиции</a>
+        </div>
+
+        <div class="category-showcase">
+          <a class="category-card" href="catalog.html?category=cakes">
+            <img src="images/photos/chocolate-cake.jpg" alt="Торт с шоколадным кремом" />
+            <span>Торты</span>
+          </a>
+          <a class="category-card" href="catalog.html?category=pastry">
+            <img src="images/photos/macarons.jpg" alt="Макаруны разных цветов" />
+            <span>Пирожные</span>
+          </a>
+          <a class="category-card" href="catalog.html?category=cookies">
+            <img src="images/photos/choco-cookies.jpg" alt="Печенье с шоколадом" />
+            <span>Печенье</span>
+          </a>
+          <a class="category-card" href="catalog.html?category=drinks">
+            <img src="images/photos/cappuccino.jpg" alt="Капучино с молочной пенкой" />
+            <span>Напитки</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section today-section">
+      <div class="container">
+        <div class="section-title row-title">
+          <div>
+            <p class="eyebrow">Сегодня в витрине</p>
+            <h2>Десерты, которые чаще всего берут к кофе и домой</h2>
+          </div>
+          <a class="text-link" href="catalog.html">Перейти в каталог</a>
+        </div>
+        <div class="product-grid featured-menu" data-featured-products></div>
+      </div>
+    </section>
+
+    <section class="section service-section">
+      <div class="container">
+        <div class="section-title service-heading">
+          <p class="eyebrow">Заказы и самовывоз</p>
+          <h2>Десерты можно забрать сегодня или заказать заранее</h2>
+          <p>
+            В каталоге можно собрать заказ из витрины, выбрать напитки и оставить контакты. После заявки мы уточняем наличие, время приготовления и удобный способ получения.
+          </p>
+        </div>
+
+        <div class="service-list service-list-row">
+          <article class="service-item">
+            <span>01</span>
+            <h3>Витрина каждый день</h3>
+            <p>Торты, пирожные, печенье и напитки доступны по категориям, чтобы быстро выбрать десерт к кофе или домой.</p>
+          </article>
+          <article class="service-item">
+            <span>02</span>
+            <h3>Предзаказ</h3>
+            <p>Для набора к событию лучше оставить заявку заранее: так проще согласовать состав, количество и время.</p>
+          </article>
+          <article class="service-item">
+            <span>03</span>
+            <h3>Самовывоз или доставка</h3>
+            <p>Можно забрать заказ в городе Баку или указать адрес доставки при оформлении корзины.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section visit-section">
+      <div class="container visit-grid">
+        <div>
+          <p class="eyebrow">Контакты</p>
+          <h2>Загляните за десертом или оформите заказ заранее</h2>
+          <p>
+            Если нужна конкретная позиция или заказ к определенному времени, лучше уточнить наличие по телефону.
+            Онлайн-заявка помогает быстро собрать заказ, а подтверждение делает кондитерская.
+          </p>
+        </div>
+        <aside class="visit-panel">
+          <span class="panel-label">Nar Patisserie</span>
+          <strong>город Баку</strong>
+          <ul class="visit-list">
+            <li>Пн-Вс: 09:00-21:00</li>
+            <li>+994 50 123 45 67</li>
+            <li>Самовывоз и доставка по городу</li>
+          </ul>
+          <div class="panel-actions">
+            <a class="btn btn-primary" href="catalog.html">Выбрать десерт</a>
+            <a class="btn btn-secondary" href="contacts.html">Открыть карту</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <a class="scroll-top" href="#top" aria-label="Вернуться наверх">↑</a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Nar Patisserie. Свежие десерты, торты и кофе в Баку.</p>
+      <p>+994 50 123 45 67 · 09:00-21:00</p>
+    </div>
+  </footer>
+</body>
+</html>
