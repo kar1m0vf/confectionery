@@ -1133,6 +1133,76 @@ textarea:focus {
 
   .product-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .product-card {
+    min-height: 136px;
+    flex-direction: row-reverse;
+    align-items: stretch;
+  }
+
+  .product-image {
+    width: 118px;
+    min-width: 118px;
+    aspect-ratio: auto;
+  }
+
+  .product-content {
+    min-width: 0;
+    padding: 12px;
+  }
+
+  .product-meta {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px 8px;
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .product-category {
+    letter-spacing: 0.08em;
+  }
+
+  .product-card h3 {
+    margin: 8px 0 5px;
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+  .product-card p {
+    overflow: hidden;
+    max-height: 2.7em;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .product-footer {
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .product-footer strong {
+    font-size: 14px;
+  }
+
+  .product-footer .btn-small {
+    padding: 8px 10px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .product-badge {
+    left: auto;
+    right: 8px;
+    top: 8px;
+    max-width: calc(100% - 16px);
+    overflow: hidden;
+    padding: 4px 7px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 10px;
   }
 
   .category-card {
