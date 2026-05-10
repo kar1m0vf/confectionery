@@ -85,10 +85,6 @@ select {
   gap: 22px;
 }
 
-.top-line a {
-  font-weight: 800;
-}
-
 .header-inner {
   min-height: 76px;
   display: flex;
@@ -304,7 +300,6 @@ select {
 }
 
 .section-title h2,
-.service-text h2,
 .visit-grid h2,
 .cart-panel h2,
 .order-panel h2 {
@@ -520,7 +515,6 @@ select {
   border-block: 1px solid var(--border);
 }
 
-.service-grid,
 .visit-grid,
 .cart-layout {
   display: grid;
@@ -529,7 +523,6 @@ select {
   align-items: start;
 }
 
-.service-text p,
 .visit-grid p,
 .panel-note {
   max-width: 660px;
@@ -993,10 +986,21 @@ textarea:focus {
   font-size: 22px;
   font-weight: 900;
   line-height: 1;
-  transition: transform 0.2s ease, background 0.2s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
 
-.scroll-top:hover {
+.scroll-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-top.is-visible:hover {
   transform: translateY(-2px);
   background: var(--primary-dark);
 }
@@ -1026,13 +1030,24 @@ textarea:focus {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top {
+    transition: opacity 0.01s linear, visibility 0.01s linear, background 0.2s ease;
+    transform: none;
+  }
+
+  .scroll-top.is-visible,
+  .scroll-top.is-visible:hover {
+    transform: none;
+  }
+}
+
 @media (max-width: 1080px) {
   .product-grid,
   .category-showcase {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .service-grid,
   .visit-grid,
   .cart-layout,
   .contact-window {
@@ -1121,7 +1136,6 @@ textarea:focus {
 
   .hero-text,
   .page-hero p,
-  .service-text p,
   .visit-grid p {
     font-size: 16px;
   }
@@ -1444,7 +1458,6 @@ body::after {
 }
 
 .section-title h2,
-.service-text h2,
 .visit-grid h2,
 .cart-panel h2,
 .order-panel h2,
@@ -1792,7 +1805,7 @@ textarea:focus {
   }
 
   .btn:hover,
-  .scroll-top:hover {
+  .scroll-top.is-visible:hover {
     transform: none;
   }
 

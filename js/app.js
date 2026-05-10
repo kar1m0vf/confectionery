@@ -78,7 +78,7 @@ function clearCart() {
 
 function createProductCard(product) {
   return `
-    <article class="product-card reveal">
+    <article class="product-card">
       <div class="product-image">
         <img src="${product.image}" alt="${product.name}" loading="lazy" referrerpolicy="no-referrer" />
         ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
@@ -282,6 +282,20 @@ function setupGlobalEvents() {
   });
 }
 
+function setupScrollTopButton() {
+  const scrollTopButton = document.querySelector('.scroll-top');
+  if (!scrollTopButton) return;
+
+  const toggleScrollTopButton = () => {
+    const isVisible = window.scrollY > Math.min(420, window.innerHeight * 0.7);
+    scrollTopButton.classList.toggle('is-visible', isVisible);
+    scrollTopButton.setAttribute('aria-hidden', String(!isVisible));
+  };
+
+  toggleScrollTopButton();
+  window.addEventListener('scroll', toggleScrollTopButton, { passive: true });
+}
+
 function setupOrderForm() {
   const form = document.querySelector('[data-order-form]');
   const message = document.querySelector('[data-order-message]');
@@ -348,6 +362,7 @@ function showToast(text) {
 function init() {
   updateCartCount();
   setupGlobalEvents();
+  setupScrollTopButton();
   applyInitialCategory();
   setupCatalogEvents();
   setupCartEvents();
